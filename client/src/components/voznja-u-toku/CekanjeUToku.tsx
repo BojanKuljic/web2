@@ -101,8 +101,7 @@ export const CekanjeUToku: React.FC<CekanjeUTokuProps> = ({
         >
           {auth?.role === "User" &&
           voznja.waitingTime === 0 &&
-          voznja.travelTime &&
-          voznja.travelTime <= 1 ? (
+          (voznja.travelTime ?? 0) <= 1 ? (
             <>
               <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
                 <div className="flex flex-col overflow-hidden rounded-lg shadow-xl bg-white/90 sm:flex-row md:h-80 p-4">
